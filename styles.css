@@ -3,6 +3,8 @@
     src: url('./util/fonts/simpsons-font/Simpsonfont.ttf') format('truetype');
 }
 
+
+
 body {
     background: skyblue;
     text-align: center;
@@ -50,6 +52,7 @@ header > h1, header > h2, #content-area {
 header {
     text-align: center;
 }
+
 header > h1, header > h2 {
     font-family: 'simpsons-font';
     color: yellow;
@@ -61,7 +64,6 @@ header > h1 {
     font-size: 5rem;
     transition: all 500ms linear;
     animation: simpsons-intro normal 2s;
-    /* animation: simpsons-intro 5s normal; */
 }
 
 
@@ -70,7 +72,6 @@ header > h2 {
     margin: 0;
     margin-top: -30px;
     margin-left: 50px;
-    /* animation: simpsons-intro 8s normal; */
 }
 
 
@@ -129,6 +130,11 @@ header > h2.hidden, header > h1.hidden {
     overflow: hidden;
 }
 
+
+.character-box > img {
+        width: 100%;
+}
+
 .character-box.offscreen {
     margin-top: 400px;
 }
@@ -163,3 +169,68 @@ header > h2.hidden, header > h1.hidden {
 }
 
 
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+
+    header > h1 {
+        margin: 5px 0 0;
+        font-size: 2rem;
+    }
+
+    header > h2 {
+        font-size: 1rem;
+        margin: 0;
+    }
+
+    #character-area {
+        margin: 0;
+    }
+
+    .character-box {
+        width: 25%;
+        margin: 0;
+        padding: 0;
+        max-height: 20%;
+        filter: brightness(100%);
+    }
+
+    .character-box > img {
+        width: 100%;
+    }
+
+    
+    #quote-box {
+        padding: 10px;
+        font-size: 1.2rem;
+        color: yellow;
+        width: 95%;
+        border: 2px solid yellow;
+        border-radius: 10px;
+        box-sizing: border-box;
+        transition: margin-left 200ms ease-in-out;
+    }
+
+    .character-box {
+        border: 2px solid yellow;
+        height: 400px;
+        width: 25%;
+    }
+
+    #score {
+        font-size: 1rem;
+    }
+    
+    #score-box > img {
+        width: 30px;
+        height: 30px;
+    }
+
+    #score-box {
+        height: 7vh;
+        width: 50px;
+        right: 10px;
+    }
+}

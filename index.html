@@ -9,14 +9,20 @@
 </head>
 <body>
     <div id="primary-area">
+        <!-- Heading - Animates on page load, otherwise static -->
         <header>
             <h1 class="hidden">*Simpsons</h1>
             <h2 class="hidden">Quote Game</h2>
         </header>
+
+        <!-- Primary Content -->
         <section class="hidden" id="content-area">
+            <!-- Quote Box Container -->
             <div id="quote-area">
                 <div id="quote-box">This is a quote</div>
             </div>
+
+            <!-- Character Cards Container -->
             <div id="character-area">
                 <div class="character-box">
                     <img src="https://cdn.glitch.com/3c3ffadc-3406-4440-bb95-d40ec8fcde72%2FMilhouseVanHouten.png?1497567513002">
@@ -34,10 +40,12 @@
         </section>
     </div>
     
+    <!-- Score box -->
     <section id="score-box">
         <img src="./util/imgs/donut.png">
         <div id="score">0</div>
     </section>
+    
     <script src="./api.js"></script>
 </body>
 </html>

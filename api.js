@@ -3,9 +3,9 @@ const loadNumber = 9;
 
 // Collection of elements that need to be accessed by scripts
 const elements = {
-    mainHeader: document.querySelector("header > h1"),
-    secondaryHeader: document.querySelector("header > h2"),
-    contentArea: document.getElementById("content-area"),
+    mainHeader: document.querySelector('header > h1'),
+    secondaryHeader: document.querySelector('header > h2'),
+    contentArea: document.getElementById('content-area'),
     characterArea: document.getElementById('character-area'),
     quoteArea: document.getElementById('quote-box'),
     score: document.getElementById('score'),
