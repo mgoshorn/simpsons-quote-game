@@ -1,0 +1,163 @@
+@font-face {
+    font-family: 'simpsons-font';
+    src: url('./util/fonts/simpsons-font/Simpsonfont.ttf') format('truetype');
+}
+
+body {
+    background: skyblue;
+    text-align: center;
+    min-height: 100vh;
+    max-height: 100vh;
+    max-width: 100vw;
+    margin: 0;
+    overflow: hidden;
+}
+
+#score-box {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 15vh;
+    width: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    vertical-align: middle;
+    color: yellow;
+}
+
+#score {
+    font-size: 3rem;
+}
+
+#score-box > img {
+    width: 75px;
+    height: 75px;
+}
+
+#primary-area {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+header > h1, header > h2, #content-area {
+    transition: all 500ms ease-out;
+}
+
+header {
+    text-align: center;
+}
+header > h1, header > h2 {
+    font-family: 'simpsons-font';
+    color: yellow;
+    text-shadow: 0 0 4px black;
+}
+
+header > h1 {
+    margin: 30px 0 0;
+    font-size: 5rem;
+    transition: all 500ms linear;
+    animation: simpsons-intro normal 2s;
+    /* animation: simpsons-intro 5s normal; */
+}
+
+
+header > h2 {
+    font-size: 1.8rem;
+    margin: 0;
+    /* animation: simpsons-intro 8s normal; */
+}
+
+
+.hidden {
+    opacity: 0;
+}
+
+header > h2.hidden, header > h1.hidden {
+    font-size: 2rem;
+}
+
+#content-area {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+#quote-area {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#character-area {
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0 10%;
+}
+
+#quote-box {
+    padding: 30px;
+    font-size: 2rem;
+    color: yellow;
+    width: 60%;
+    border: 4px solid yellow;
+    border-radius: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: margin-left 200ms ease-in-out;
+}
+
+.character-box {
+    border: 5px solid yellow;
+    height: 200px;
+    width: 20%;
+    border-radius: 10px;
+    border-top-left-radius: 60%;
+    border-bottom-right-radius: 60%;
+    filter: brightness(50%);
+    background: yellow;
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+    overflow: hidden;
+}
+
+.character-box.offscreen {
+    margin-top: 400px;
+}
+
+#quote-box.offscreen {
+    margin-left: 200vw;
+}
+
+.character-box.correct {
+    background: green;
+    filter: none;
+}
+
+.character-box.incorrect {
+    background: red;
+    filter: none;
+}
+
+.character-box:hover {
+    filter: none;
+}
+
+.character-box.flip > img {
+    filter: FlipH;
+}
+
+@keyframes simpsons-intro {
+    0% { opacity: 0; font-size: 0;}
+    25% { opacity: 0 }
+    50% { opacity: 1;}
+    100% { opacity: 1; }
+}
+
+
