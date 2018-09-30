@@ -1,6 +1,6 @@
 ## Simpson's Quote Game
 
-This is a simple 'Who Said It' style game featuring the cast of The Simpsons.  Data is provided by the Simpson's Quote API.
+This is a simple 'Who Said It' style game featuring the cast of The Simpsons.  Data is provided by the [Simpson's Quote API](https://github.com/JLuboff/TheSimpsonsQuoteAPI).
 
 ### Technical Details
 
